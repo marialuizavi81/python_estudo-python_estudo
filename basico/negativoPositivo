@@ -1,0 +1,15 @@
+#código verifica se o número fornecido é positivo, negativo, zero, e se é par ou ímpar.
+num = int(input('Escreva um número para saber se é positivo, negativo, zero, par ou ímpar: '))
+
+
+if num < 0:
+    print(f'{num} é menor que zero, sendo negativo')
+elif num == 0:
+    print(f'{num} é igual a zero')
+else:
+    print(f'{num} é maior que zero, sendo positivo')
+
+if num % 2 == 0:
+    print(f'{num} é par')
+else:
+    print(f'{num} é ímpar')
