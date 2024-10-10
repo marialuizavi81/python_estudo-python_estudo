@@ -1,0 +1,40 @@
+senha = [" "] * 5
+nome = [" "] * 5
+tam = len(senha)
+
+while True:
+    opcao = int(input("1 cadastrar \n"
+                      "2 amostrar \n"
+                      "3 login \n"
+                      "4 sair \n"))
+    if opcao == 1:
+        for x in range(tam):
+            senha[x] = input("Escreva uma senha: ")
+            nome[x] = input("Escreva o seu nome: ")
+            oo = int(input("Você quer cadastrar mais alguém? Digite 1 para continuar ou 2 para sair: "))
+            if oo == 2:
+                break
+    
+    elif opcao == 2:
+        for i in range(tam):
+            print(f"Na posição {i}, a senha de {nome[i]} é: {senha[i]}")
+            
+    elif opcao == 3:
+        nnome = input("Escreva o seu nome: ")
+        for x in range(tam):
+            if nnome == nome[x]:
+                print(f"Olá, obrigada por voltar {nome[x]}")
+                while True: 
+                    ssenha = input("Escreva sua senha: ")
+                    if senha[x] == ssenha:
+                        print("Bem-vindo de volta!")
+                        break
+                    else:
+                        print("Senha incorreta, tente novamente.")
+                break  
+        else:
+            print("Cliente não encontrado, tente novamente.")
+            
+    elif opcao == 4:
+        print("Saindo do sistema....")
+        break
